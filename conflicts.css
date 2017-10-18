@@ -1,0 +1,42 @@
+    .header {
+        &.content {
+            .customer-welcome {
+                display: none;
+            }
+        }
+        &.content:extend(.abs-add-clearfix all) {
+            padding-top: @indent__s;
+            position: relative;
+        }
+    }
+
+    .logo {
+        display: block;
+        max-height: 80px;
+        max-width: 80px;
+        position: relative;
+        z-index: 5;
+        float: left;
+        margin: 0 0 10px 42%;
+
+        img {
+            display: block;
+            height: 54px;
+        }
+
+        &-text {
+            display: none;
+            color: @color-fiftyfive-turquois;
+            max-height: inherit;
+            font: bold 19px/64px @font-family__base;
+            margin-left: 20px;
+            float: left;
+            cursor: default;
+        }
+
+        .page-print & {
+            display: inline-block;
+            float: none;
+        }
+    }
+
