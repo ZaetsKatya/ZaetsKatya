@@ -9,58 +9,67 @@
 
 
 <body>
- 	  <div>Create New Customer Account</div>
-
-	<form novalidate>
-		
-	Contact information<input type="text">
-	<p>First name <input type="text" placeholder="імя" required></p>
-	<p>Last name <input type="text"  placeholder="прізвище"></p>
-	<p>Gender: <input type="radio" name="gender" value="male">
-			<input type="radio" name="gender" value="female"></p>
-
-			Company<p><textarea rows="10" cols="10" name="text"></textarea></p>
-			<p>Phone number <input type="text" required></p>
-			About me <p><textarea rows="10" cols="10" name="text"></textarea></p>
 
 
-	Adress 
+ 	  Create New Customer Account
+
 	
-	<legent>Street Address</legent>
-	<p>City 			<input type="text"></p>
-	<p>State <select name="state"><option value="rv">Рівне</option> 
-									<option value="lu">Луцьк</option>
+	<fieldset>
+		
+	<legent>Contact information</legent>
+	<p><label for="first">First name</label> <input type="text" id="first" placeholder="імя" required pattern="[A-Z]"></p>
+	<label for="last">Last name</label> <input type="text" id="last"  placeholder="прізвище"><br>
+	<p><label for="gender">Gender: </label><input type="radio" name="gender" id="gender" value="male">
+			<input type="radio" name="gender" id="gender" value="female"></p>
+
+	<p><label for="comp">Company<input type="text" id="comp"></p>
+	<p><label for="tel">Phone number</label> <input type="tel" name="tel" required></p>
+	   <label for="area">About me </label><textarea rows="10" cols="30" name="text" id="area"></textarea>
+
+	</fieldset>		
+
+
+	<fieldset>
+	<legent>Adress</legent> 
+	
+	<p><label for="street">Street Address</label><input type="text" id="street"></p>
+	<p><label for="city">City</label> <input type="text" id="city"></p>
+	<p><label for="state">State</label><select id="state">	
+									<option selected disabled>Виберіть місто</option>
+									<option value="rv">Рівне</option> 
+									<option  value="lu">Луцьк</option>
 									<option value="ku">Київ</option>
 									<option value="li">Львів</option>
 
-		</select></p>
+									</select></p>
 
-		<p>Zip Code <input type="text"></p>
 
-		<p>Country<select name="state"><option value="ua">Україна</option> 
+		<p><label for="code">Zip Code</label><input type="text"></p>
+
+		<p><label for="country">Country</label><select name="country"><option value="ua">Україна</option> 
 									<option value="us">США</option>
 									<option value="fr">Франція</option>
 									<option value="gb">Великабританія</option>
+									</select>
+	</fieldset>
 
+	<fieldset>
+		<legent>Sign-in information</legent>
 
-
-			<p> <legent>Sign-in information</legent></p>
-
-			<p>Email<input type="text"  placeholder="введіть email"></p>
-			<p>Password<input type="text"  placeholder="пароль"></p>
-			<p>confim password<input type="text"></p>
+			<p><label for="email">Email</label><input type="email" id="email" placeholder="введіть email"></p>
+			<p><label for="password">Password</label><input type="password" id="password"  placeholder="пароль"></p>
+			<p><label for="password">Confirm password</label><input type="password" id="password"></p>
      
-          <legent>Create an account</legent>
+          <label for="account">Create an account</label> 
 
-			<input type="submit" value="Відправити" >
+			<input type="submit" id="account" value="Відправити" formnovalidate >
 
 
-
+</fieldset>
  
 
 
- 	</form>
-
+ 	
 
 
 
